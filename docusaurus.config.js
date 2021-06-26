@@ -13,7 +13,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   
   url: 'https://giggity-hub.github.io',
-  baseUrl: '/',
+  baseUrl: '/advanced-data-science/',
   organizationName: 'giggity-hub', // Usually your GitHub org/user name.
   projectName: 'advanced-data-science', // Usually your repo name.
   trailingSlash: false,
