@@ -14,7 +14,7 @@ module.exports = {
   
   url: 'https://giggity-hub.github.io',
   baseUrl: '/advanced-data-science/',
-  organizationName: 'giggity-hub', // Usually your GitHub org/user name.
+  organizationName: 'zesch', // Usually your GitHub org/user name.
   projectName: 'advanced-data-science', // Usually your repo name.
   trailingSlash: false,
 
