@@ -1,0 +1,67 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ude-primary: #004c93;
+  --ude-secondary: #efe4bf;
+  --ude-tertiary: #dfe4f2;
+  --ude-copytext: #1a171b;
+  /* --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208); */
+  --ifm-color-primary: #004c93;
+  --ifm-color-primary-dark: #004484;
+  --ifm-color-primary-darker: #00417d;
+  --ifm-color-primary-darkest: #003567;
+  --ifm-color-primary-light: #0054a2;
+  --ifm-color-primary-lighter: #0057a9;
+  --ifm-color-primary-lightest: #0063bf;
+
+
+  --ifm-color-secondary: #efe4bf;
+  --ifm-color-secondary-dark: #e6d59d;
+  --ifm-color-secondary-darker: #e2ce8b;
+  --ifm-color-secondary-darkest: #d5b858;
+  --ifm-color-secondary-light: #f8f3e1;
+  --ifm-color-secondary-lighter: #fcfaf3;
+  --ifm-color-secondary-lightest: #ffffff;
+
+  --ifm-code-font-size: 95%;
+
+  
+}
+
+html[data-theme='light']{
+  --ifm-footer-background-color:var(--ude-copytext);
+  --ifm-footer-color: white;
+  --ifm-footer-link-color: white;
+}
+
+
+html[data-theme='dark']{
+  --ifm-background-color: var(--ude-copytext);
+  /* --ifm-background-surface-color: red; */
+  /* --ifm-navbar-background-color */
+}
+
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
