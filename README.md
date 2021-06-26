@@ -11,6 +11,12 @@ Useful information.
 
 # for Developers
 
+## Deploy
+On windows Powershell run
+```shell
+cmd /C "set GIT_USER=giggity-hub&& npm run deploy"
+```
+
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
