@@ -8,13 +8,16 @@ const currentLecture = 'intro'
 module.exports = {
   title: 'Missing Semester',
   tagline: 'Your missing CS education',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  
+  url: 'https://giggity-hub.github.io',
+  baseUrl: '/advanced-data-science/',
+  organizationName: 'giggity-hub', // Usually your GitHub org/user name.
+  projectName: 'advanced-data-science', // Usually your repo name.
+  trailingSlash: false,
+
   themeConfig: {
     navbar: {
       title: 'Missing Semester',
