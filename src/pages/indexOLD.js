@@ -18,8 +18,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Zu den Vorlesungen
+            to="/docs/">
+            Lectures
           </Link>
         </div>
       </div>
@@ -34,8 +34,8 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main className="container margin-top--lg">
+        {/* <HomepageFeatures /> */}
 
       </main>
     </Layout>
