@@ -7,10 +7,15 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  /* UDE Logo und Signet => https://www.uni-due.de/offen-im-denken/ */
+  /*UDE Farben => https://www.uni-due.de/offen-im-denken/farben.php */
+  /* Infima Variables => https://github.com/facebook/docusaurus/issues/3955 */
   --ude-primary: #004c93;
   --ude-secondary: #efe4bf;
   --ude-tertiary: #dfe4f2;
   --ude-copytext: #1a171b;
+  --ude-copytext-shade: #171518; /*10% shade*/
+  --ude-copytext-tint: #1e1c1f; /*3% tint*/
   /* --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
@@ -41,18 +46,28 @@
 }
 
 html[data-theme='light']{
+  /* footer */
   --ifm-footer-background-color:var(--ude-copytext);
   --ifm-footer-color: white;
   --ifm-footer-link-color: white;
+
+  --code-block-background-color: rgb(246, 248, 250);
 }
 
 
 html[data-theme='dark']{
-  --ifm-background-color: var(--ude-copytext);
-  /* --ifm-background-surface-color: red; */
+
+  --ifm-background-color: var(--ude-copytext-shade);
+  --ifm-footer-background-color: var(--ude-copytext);
+  --ifm-background-surface-color: var(--ude-copytext-tint);
   /* --ifm-navbar-background-color */
+
+  --code-block-background-color: var(--ude-copytext-tint);
 }
 
+pre{
+  background-color: var(--code-block-background-color) !important;
+}
 
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
