@@ -6,13 +6,13 @@ const currentLecture = 'intro'
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Missing Semester',
-  tagline: 'Your missing CS education',
+  title: 'Advanced Data Science',
+  tagline: 'A gentle introduction to everything data',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   
-  url: 'https://giggity-hub.github.io',
+  url: 'https://zesch.github.io',
   baseUrl: '/advanced-data-science/',
   organizationName: 'zesch', // Usually your GitHub org/user name.
   projectName: 'advanced-data-science', // Usually your repo name.
