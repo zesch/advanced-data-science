@@ -16,7 +16,7 @@ module.exports = {
   baseUrl: '/advanced-data-science/',
   organizationName: 'zesch', // Usually your GitHub org/user name.
   projectName: 'advanced-data-science', // Usually your repo name.
-  trailingSlash: false,
+  trailingSlash: true,
 
   themeConfig: {
     navbar: {
