@@ -1,38 +1,57 @@
-import React from 'react';
+import React, {useState} from 'react';
+import CodeBlock from '@theme/CodeBlock';
 
-export const MultipleChoice = ({question, correct, wrong, children}) => {
+export const MultipleChoice = ({code, question, children}) => {
 
+    const [checked, setChecked] = useState(children.map(c => false))
+    const [show, setShow] = useState(children.map(c => false))
+    
+
+    const checkBoxClickHandler = (index) => {
+        const newState = [...checked]
+        newState[index] = !newState[index]
+        setChecked(newState)
+    }
+
+    const submitHandler = () => {
+        setShow([...checked]);
+    }
     return (
-        <div className="card">
-            <div className="card__header">
-                <h3>{question}</h3>
-            </div>
-           
-            <div className="card__body">
-                <div className="form-check">
-                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
-                    <label className="form-check-label" for="exampleRadios1">
-                        Default radio
-                    </label>
-                    </div>
-                    <div className="form-check">
-                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
-                    <label className="form-check-label" for="exampleRadios2">
-                        Second default radio
-                    </label>
-                    </div>
-                    <div className="form-check disabled">
-                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled/>
-                    <label className="form-check-label" for="exampleRadios3">
-                        Disabled radio
-                    </label>
-                </div>
-            </div>
-
-            <div className="card__footer">
-                <button className="button button--primary">Verify</button>
-            </div>
-            {children}
+        <div className="quiz multiple-choice">
+        <h3>{question}</h3>
+        {code &&
+            <CodeBlock>{code}</CodeBlock>
+        }
+        {children.map((child, index) => {
+            const childProps = {index, checked: checked[index], showExplanation: show[index], ...child.props}
+            return <AnswerContainer clickHandler={checkBoxClickHandler} {...childProps}/>
+        })}
+        <button class="button button--primary" onClick={submitHandler}>Submit</button>
         </div>
+
     )
+}
+
+
+const AnswerContainer = ({clickHandler, text, explanation, correct, showExplanation, index, checked}) => {
+
+    return (<div className="answer" onClick={()=> clickHandler(index)}>
+        <input type="checkbox" id="checkbox" checked={checked} onChange={()=> clickHandler(index)}/>
+        <label for="checkbox">{text}</label>
+        {showExplanation &&
+            <div className={`alert alert--${correct ? 'success' : 'danger'}`} role="alert">
+                {explanation}
+            </div>
+        }
+    </div>)
+}
+
+export const Answer = () => {
+    throw new Error(
+        'ReactBootstrap: The `Tab` component is not meant to be rendered! ' +
+          "It's an abstract component that is only valid as a direct Child of the `Tabs` Component. " +
+          'For custom tabs components use TabPane and TabsContainer directly',
+      );
+      // Needed otherwise docs error out.
+      return <></>;
 }

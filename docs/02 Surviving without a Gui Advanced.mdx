@@ -2,5 +2,33 @@
 title: Surviving without a GUI (Advanced)
 
 ---
+import {MultipleChoice, Answer} from './_components/Quiz.js';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-# Surviving without a GUI (Advanced)
+
+
+
+<MultipleChoice
+question = 'Was ist der Output des folgenden Codes?'
+code = {
+`let x = 1+1
+console.log(x)
+`}>
+<Answer
+    correct
+    text="1"
+    explanation="Bruder willst du hardward scholarship?"
+/>
+<Answer
+    text="0"
+    explanation="lmao. nah u dumb as hell"
+/>
+<Answer
+    text="4"
+    explanation="bruuuuh"
+/>
+</MultipleChoice>
+
+
