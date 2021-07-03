@@ -5,6 +5,9 @@
  * work well for content-centric websites.
  */
 
+ @import url('language-specific-codeblocks.css');
+
+
 /* You can override the default Infima variables here. */
 :root {
   /* UDE Logo und Signet => https://www.uni-due.de/offen-im-denken/ */
@@ -52,6 +55,7 @@ html[data-theme='light']{
   --ifm-footer-link-color: white;
 
   --code-block-background-color: rgb(246, 248, 250);
+  --ifm-background-color: white;
 }
 
 

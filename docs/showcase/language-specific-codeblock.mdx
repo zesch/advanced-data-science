@@ -1,0 +1,32 @@
+# language specific codeblocks
+
+## Example
+
+```javascript
+let x = 1+1
+function increment(n){
+    return n+1
+}
+```
+
+```python
+x = 1+1
+def increment(n):
+    return n+1
+```
+
+:::note 
+if no language is specified in markdown or the language is not supported the codeblock renders as usual
+:::
+```
+x = 1+1
+def increment(n):
+    return n+1
+```
+
+## Adding another language 
+a new language specific color can be added with just two css rules
+```css
+.prism-code.language-css{--language-color: pink}
+.prism-code.language-css::after{content: "css"}
+```

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import CodeBlock from '@theme/CodeBlock';
 
-export const MultipleChoice = ({code, question, children}) => {
+export const MultipleChoice = ({code, codeLang, question, children}) => {
 
     const [checked, setChecked] = useState(children.map(c => false))
     const [show, setShow] = useState(children.map(c => false))
@@ -20,7 +20,7 @@ export const MultipleChoice = ({code, question, children}) => {
         <div className="quiz multiple-choice">
         <h3>{question}</h3>
         {code &&
-            <CodeBlock>{code}</CodeBlock>
+            <CodeBlock className={`language-${codeLang}`}>{code}</CodeBlock>
         }
         {children.map((child, index) => {
             const childProps = {index, checked: checked[index], showExplanation: show[index], ...child.props}
