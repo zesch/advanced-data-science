@@ -17,16 +17,22 @@ export const MultipleChoice = ({code, codeLang, question, children}) => {
         setShow([...checked]);
     }
     return (
-        <div className="quiz multiple-choice">
-        <h3>{question}</h3>
-        {code &&
-            <CodeBlock className={`language-${codeLang}`}>{code}</CodeBlock>
-        }
-        {children.map((child, index) => {
-            const childProps = {index, checked: checked[index], showExplanation: show[index], ...child.props}
-            return <AnswerContainer clickHandler={checkBoxClickHandler} {...childProps}/>
-        })}
-        <button class="button button--primary" onClick={submitHandler}>Submit</button>
+        <div className="quiz multiple-choice-quiz card margin-bottom--md">
+        <div className="card__header">
+            <h3>{question}</h3> 
+        </div>
+        <div className="card__body">
+            {code &&
+                <CodeBlock className={`language-${codeLang}`}>{code}</CodeBlock>
+            }
+            {children.map((child, index) => {
+                const childProps = {index, checked: checked[index], showExplanation: show[index], ...child.props}
+                return <AnswerContainer clickHandler={checkBoxClickHandler} {...childProps}/>
+            })}
+        </div>
+        <div className="card__footer">
+            <button class="button button--primary" onClick={submitHandler}>Submit</button>
+        </div>
         </div>
 
     )
