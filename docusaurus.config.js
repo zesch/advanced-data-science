@@ -10,7 +10,7 @@ module.exports = {
   tagline: 'A gentle introduction to everything data',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/signet_ude.svg',
   
   url: 'https://zesch.github.io',
   baseUrl: '/advanced-data-science/',
@@ -23,7 +23,7 @@ module.exports = {
       title: 'Advanced Data Science',
       logo: {
         alt: 'UDE signet',
-        src: 'img/UDE signet.svg',
+        src: 'img/signet_ude.svg',
       },
       items: [
         {to: '/docs', label: 'lectures', position: 'left'}
