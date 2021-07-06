@@ -26,10 +26,12 @@ import {MultipleChoice, Answer} from './_components/Quiz.js';
 
 <MultipleChoice
 question = 'Was ist der Output des folgenden Codes?'
+codeLang = "javascript"
 code = {
 `let x = 1+1
 console.log(x)
 `}>
+
 <Answer
     correct
     text="2"
