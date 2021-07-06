@@ -20,9 +20,9 @@ module.exports = {
 
   themeConfig: {
     navbar: {
-      title: 'Missing Semester',
+      title: 'Advanced Data Science',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'UDE signet',
         src: 'img/UDE signet.svg',
       },
       items: [
