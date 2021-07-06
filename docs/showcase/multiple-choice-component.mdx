@@ -4,8 +4,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
+Hier ist ein bisschen text um zu sehen wie sich die margin der Quiz-Komponente aussieht
 
-
+:::note
+shosh
+:::
 <MultipleChoice
 question = 'Was ist der Output des folgenden Codes?'
 codeLang= 'javascript'
@@ -26,3 +29,23 @@ console.log(x)
 </MultipleChoice>
 
 
+<MultipleChoice
+question = 'Kann man auch ein multiple choice quiz ohne code block erstellen?'
+codeLang= 'javascript'
+code = {
+`let x = 1+1
+console.log(x)
+`}>
+
+<Answer
+    correct
+    text="Ja indem man einfach die Felder 'code' und 'codeLang' weglässt"
+    explanation="Yeah Boi. Dis is da wae"
+/>
+<Answer
+    text="Nein"
+    explanation="Doch"
+/>
+</MultipleChoice>
+
+Hier ist ein bisschen text um zu sehen wie sich die margin der Quiz-Komponente aussieht 
