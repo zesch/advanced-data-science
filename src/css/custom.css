@@ -6,6 +6,7 @@
  */
 
  @import url('language-specific-codeblocks.css');
+ @import url('quiz.css');
 
 
 /* You can override the default Infima variables here. */
@@ -66,7 +67,7 @@ html[data-theme='dark']{
   --ifm-background-surface-color: var(--ude-copytext-tint);
   /* --ifm-navbar-background-color */
 
-  --code-block-background-color: var(--ude-copytext-tint);
+  --code-block-background-color: #00080f;
 }
 
 pre{
