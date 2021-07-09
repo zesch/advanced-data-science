@@ -45,7 +45,6 @@
   --ifm-color-secondary-lightest: #ffffff;
 
   --ifm-code-font-size: 95%;
-
   
 }
 
@@ -62,12 +61,12 @@ html[data-theme='light']{
 
 html[data-theme='dark']{
 
-  --ifm-background-color: var(--ude-copytext-shade);
+  /* --ifm-background-color: var(--ude-copytext-shade);
   --ifm-footer-background-color: var(--ude-copytext);
-  --ifm-background-surface-color: var(--ude-copytext-tint);
+  --ifm-background-surface-color: var(--ude-copytext-tint); */
   /* --ifm-navbar-background-color */
 
-  --code-block-background-color: #00080f;
+  --code-block-background-color: rgb(40, 42, 54) ;
 }
 
 pre{
