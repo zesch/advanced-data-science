@@ -1,30 +1,30 @@
 .prism-code{
-    --language-color: rgba(0,0,0,0);
-    /* box-shadow: 0 0 0 2px var(--language-color); */
+    /* ifm-color-emphasis-300 is default border color*/
+    --language-color: var(--ifm-color-emphasis-300);
     border: 1px solid var(--language-color);
 }
 
-.prism-code::after{
+.prism-code::before{
     color: var(--language-color);
     position: absolute;
     background: linear-gradient(0deg, var(--code-block-background-color) 50%, rgba(0,0,0,0) 50%);
     padding: 0 10px;
     top: -10px;
     left: 20px;
-    height: 20px;
+    line-height: 20px;
 }
 
 /* !!! Make sure to choose colors with great visibility in both light and dark mode !!! */
 
 /* Javascript */
 .prism-code.language-javascript{--language-color: orange}
-.prism-code.language-javascript::after{content: "javascript"}
+.prism-code.language-javascript::before{content: "javascript"}
 /* python */
 .prism-code.language-python{--language-color: cornflowerBlue}
-.prism-code.language-python::after{content: "python"}
+.prism-code.language-python::before{content: "python"}
 /* Css */
 .prism-code.language-css{--language-color: blueviolet}
-.prism-code.language-css::after{content: "css"}
+.prism-code.language-css::before{content: "css"}
 
 
-/* minimal version */
+
