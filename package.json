@@ -24,6 +24,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-typist": "^2.0.5",
+    "shuffle-array": "^1.0.1",
+    "typewriter-effect": "^2.18.0",
     "unique-random-array": "^3.0.0",
     "url-loader": "^4.1.1"
   },
