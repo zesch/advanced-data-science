@@ -10,7 +10,7 @@ module.exports = {
   tagline: 'A gentle introduction to everything data',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/signet_ude.svg',
+  favicon: 'img/signet_ude_primary.svg',
   
   url: 'https://zesch.github.io',
   baseUrl: '/advanced-data-science/',
@@ -43,13 +43,15 @@ module.exports = {
       title: 'Advanced Data Science',
       logo: {
         alt: 'UDE signet',
-        src: 'img/ude/signet_ude.svg',
+        src: 'img/ude/signet_ude_primary.svg',
       },
       items: [
-        {to: '/docs', label: 'lectures', position: 'left'}
+        {to: '/docs', label: 'Lectures', position: 'left'},
+        {to: '/setup', label: 'Setup', position: 'left'}
       ],
     },
     footer: {
+      style: 'light',
       logo: {
         alt: 'Universität Duisburg-Essen Logo',
         src: 'img/ude/logo_claim_negativ.svg',
@@ -74,7 +76,7 @@ module.exports = {
             },
             {
               label: 'WSL2 installation',
-              to: 'wsl2/',
+              to: 'setup/',
             }
           ]
         },
