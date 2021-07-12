@@ -4,41 +4,48 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import uniqueRandomArray from 'unique-random-array';
-// import Typist from 'react-typist';
-// import HomepageFeatures from '../components/HomepageFeatures';
+import Typewriter from 'typewriter-effect';
+import Introduction from './introduction.mdx';
+
+const shuffle = require('shuffle-array');
 
 
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
-  const {taglines} = siteConfig.customFields;
-  const randomTagline = uniqueRandomArray(taglines);
-  const [subtitle, setSubtitle] = useState(randomTagline());
-
-  useEffect(()=>{
-      const interval = setInterval(() => {
-        setSubtitle(randomTagline);
-      }, 5000)
-      return () => clearInterval(interval);
-  })
+  const taglines = shuffle(siteConfig.customFields.taglines);
 
   return (
     <header className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{subtitle}</p>
+        <span className={clsx('hero__subtitle', styles.typwriterWrapper)}>
+        <Typewriter
+          className="asdfasdfasdf"
+          options={{
+            strings: taglines,
+            autoStart: true,
+            loop: true,
+            delay: 40,
+            deleteSpeed: 20,
+            pauseFor: 4000,
+            skipAddStyles: true,
+          }}
+        />
+        </span>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/">
-            lectures
-          </Link>
-          <Link
-            className="button button--secondary button--outline button--lg margin-left--lg"
-            to="/docs/">
-            Unix Shell installation
-          </Link>
+
+            <Link
+              className="button button--primary button--lg margin-bottom--md margin-right--lg"
+              to="/docs/">
+              lectures
+            </Link>
+            <Link
+              className="button button--secondary button--lg margin-bottom--md"
+              to="/setup/">
+              Unix Shell installation
+            </Link>
+
         </div>
       </div>
     </header>
@@ -54,6 +61,11 @@ export default function Home() {
       <HomepageHeader />
       <main>
         {/* <HomepageFeatures /> */}
+        <div className="container padding-top--lg padding-bottom--lg">
+          <div className="markdown">
+            <Introduction/> 
+          </div>
+        </div>
       </main>
     </Layout>
   );
