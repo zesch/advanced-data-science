@@ -20,57 +20,51 @@
   --ude-copytext: #1a171b;
   --ude-copytext-shade: #171518; /*10% shade*/
   --ude-copytext-tint: #1e1c1f; /*3% tint*/
-  /* --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208); */
-  --ifm-color-primary: #004c93;
-  --ifm-color-primary-dark: #004484;
-  --ifm-color-primary-darker: #00417d;
-  --ifm-color-primary-darkest: #003567;
-  --ifm-color-primary-light: #0054a2;
-  --ifm-color-primary-lighter: #0057a9;
-  --ifm-color-primary-lightest: #0063bf;
+
+  
+  --ifm-color-primary: #528bff;
+  --ifm-color-primary-dark: #3074ff;
+  --ifm-color-primary-darker: #1f69ff;
+  --ifm-color-primary-darkest: #004eec;
+  --ifm-color-primary-light: #74a2ff;
+  --ifm-color-primary-lighter: #85adff;
+  --ifm-color-primary-lightest: #b7cfff;
 
 
-  --ifm-color-secondary: #efe4bf;
-  --ifm-color-secondary-dark: #e6d59d;
-  --ifm-color-secondary-darker: #e2ce8b;
-  --ifm-color-secondary-darkest: #d5b858;
-  --ifm-color-secondary-light: #f8f3e1;
-  --ifm-color-secondary-lighter: #fcfaf3;
-  --ifm-color-secondary-lightest: #ffffff;
+  --ifm-color-secondary: #FFC652;
+  --ifm-color-secondary-dark: #ffbb30;
+  --ifm-color-secondary-darker: #ffb51f;
+  --ifm-color-secondary-darkest: #ec9e00;
+  --ifm-color-secondary-light: #ffd174;
+  --ifm-color-secondary-lighter: #ffd785;
+  --ifm-color-secondary-lightest: #ffe7b7;
 
   --ifm-code-font-size: 95%;
   
-}
-
-html[data-theme='light']{
-  /* footer */
-  --ifm-footer-background-color:var(--ude-copytext);
+  /* custom css variables */
+  --color-dark: #262A31;
+  --ifm-footer-background-color: var(--color-dark);
   --ifm-footer-color: white;
   --ifm-footer-link-color: white;
-
-  --code-block-background-color: rgb(246, 248, 250);
-  --ifm-background-color: white;
+}
+.hero--dark {
+  --ifm-hero-background-color: var(--color-dark);
 }
 
+
+html[data-theme='light']{
+  --ifm-code-background: rgb(246, 248, 250);
+}
 
 html[data-theme='dark']{
-
-  /* --ifm-background-color: var(--ude-copytext-shade);
-  --ifm-footer-background-color: var(--ude-copytext);
-  --ifm-background-surface-color: var(--ude-copytext-tint); */
-  /* --ifm-navbar-background-color */
-
-  --code-block-background-color: rgb(40, 42, 54) ;
+  --ifm-background-color: #21252B;
+  --ifm-background-surface-color: #333842;
+  --ifm-code-background: #2C313A;
+  --ifm-footer-background-color: #262A31;
 }
 
-pre{
-  background-color: var(--code-block-background-color) !important;
+.prism-code > div{
+  background: var(--ifm-code-background) !important;
 }
 
 .docusaurus-highlight-code-line {
