@@ -6,6 +6,9 @@ const currentLecture = 'intro'
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
+  plugins: [
+    require.resolve('@cmfcmf/docusaurus-search-local')
+  ],
   title: 'Advanced Data Science',
   tagline: 'A gentle introduction to everything data',
   onBrokenLinks: 'throw',
