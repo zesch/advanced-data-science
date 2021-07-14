@@ -2,13 +2,10 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 
-const currentLecture = 'intro'
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  plugins: [
-    require.resolve('@cmfcmf/docusaurus-search-local')
-  ],
+
   title: 'Advanced Data Science',
   tagline: 'A gentle introduction to everything data',
   onBrokenLinks: 'throw',
@@ -36,7 +33,8 @@ module.exports = {
       "Of Pandas, Penguins and Snakes - Tools to automate Data Analysis",
       "Datmancy",
       "How to become a datamancer",
-      "Advanced Data Literacy or: How I Learned to Stop Worrying and Love the Data"
+      "Advanced Data Literacy or: How I Learned to Stop Worrying and Love the Data",
+      "If you hold a Unix Shell up to your ear can you hear the C?"
     ]
   },
   
@@ -49,7 +47,7 @@ module.exports = {
         src: 'img/ude/signet_ude_primary.svg',
       },
       items: [
-        {to: '/docs', label: 'Lectures', position: 'left'},
+        {to: '/docs/01/01', label: 'Lectures', position: 'left'},
         {to: '/setup', label: 'Setup', position: 'left'}
       ],
     },
@@ -75,7 +73,7 @@ module.exports = {
           items: [
             {
               label: 'lectures',
-              to: 'docs/',
+              to: 'docs/01/01/',
             },
             {
               label: 'WSL2 installation',
