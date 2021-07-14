@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import Typewriter from 'typewriter-effect';
 import Introduction from './introduction.mdx';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 const shuffle = require('shuffle-array');
 
@@ -37,7 +38,7 @@ function HomepageHeader() {
 
             <Link
               className="button button--primary button--lg margin-bottom--md margin-right--lg"
-              to="/docs/">
+              to="/docs/basic-shell/">
               lectures
             </Link>
             <Link
@@ -60,10 +61,9 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        {/* <HomepageFeatures /> */}
+        <HomepageFeatures />
         <div className="container padding-top--lg padding-bottom--lg">
-          <div className="markdown">
-            <Introduction/> 
+          <div className="markdown ">
           </div>
         </div>
       </main>
