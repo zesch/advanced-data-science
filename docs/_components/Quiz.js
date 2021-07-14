@@ -56,6 +56,5 @@ export const Answer = () => {
         'The `Answer` component is not meant to be rendered! ' +
           "It's an abstract component that is only valid as a direct Child of the `MultipleChoice` Component. "
       );
-      // Needed otherwise docs error out.
       return <></>;
 }
