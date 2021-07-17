@@ -65,6 +65,7 @@ slug: /
 title: Surviving without a GUI
 sidebar_position: 1
 ---
+```
 
 ## 1.3. <a name='forDevelopers'></a>for Developers
 
