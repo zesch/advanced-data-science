@@ -38,13 +38,13 @@ function HomepageHeader() {
 
             <Link
               className="button button--primary button--lg margin-bottom--md margin-right--lg"
-              to="/docs/basic-shell/">
-              lectures
+              to="/docs/01/01/">
+              Lectures
             </Link>
             <Link
               className="button button--secondary button--lg margin-bottom--md"
               to="/setup/">
-              Unix Shell installation
+              Setup
             </Link>
 
         </div>
