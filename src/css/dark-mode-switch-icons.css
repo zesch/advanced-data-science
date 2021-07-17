@@ -1,0 +1,11 @@
+/* this is really fucking ugly */
+.react-toggle-track-check>span::before {
+    content: '\f186';
+    font-family: "Font Awesome 5 Free";
+    font-size: .9rem;
+  }
+  .react-toggle-track-x>span::before {
+    content: '\2600';
+    color: #ffd557;
+    font-family: "Font Awesome 5 Free";
+  }

@@ -8,6 +8,9 @@
  @import url('language-specific-codeblocks.css');
  @import url('quiz.css');
 
+ @import url('../../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+
+ @import url('./dark-mode-switch-icons.css');
 
 /* You can override the default Infima variables here. */
 :root {
@@ -77,4 +80,3 @@ html[data-theme='dark']{
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
-

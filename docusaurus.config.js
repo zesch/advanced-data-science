@@ -1,6 +1,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+// import { css, jsx } from '@emotion/react'
 
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -33,13 +34,19 @@ module.exports = {
       "Of Pandas, Penguins and Snakes - Tools to automate Data Analysis",
       "Datmancy",
       "How to become a datamancer",
-      "Advanced Data Literacy or: How I Learned to Stop Worrying and Love the Data",
-      "If you hold a Unix Shell up to your ear can you hear the C?"
+      "Advanced Data Literacy or: How I Learned to Stop Worrying and Love the Data"
     ]
   },
   
 
   themeConfig: {
+    colorMode: {
+      switchConfig:{
+        darkIcon: ' ',
+        lightIcon: ' ',
+
+      }
+    },
     navbar: {
       title: 'Advanced Data Science',
       logo: {
