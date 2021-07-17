@@ -76,19 +76,6 @@ module.exports = {
         </a>`,
       links: [
         {
-          title: 'learn',
-          items: [
-            {
-              label: 'lectures',
-              to: 'docs/01/01/',
-            },
-            {
-              label: 'WSL2 installation',
-              to: 'setup/',
-            }
-          ]
-        },
-        {
           title: 'Contact',
         },
         {
