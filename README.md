@@ -109,7 +109,7 @@ Custom components like `MultipleChoiceQuiz` are located in `docs/_components`
 
 ### 1.3.6. CustomFields
 
-```json
+```javascript
 
 customFields: {
 	// The taglines added to this array will be shown randomly in the Hero Section of the landing page
