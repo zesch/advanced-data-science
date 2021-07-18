@@ -7,6 +7,7 @@ const FeatureList = [
   {
     title: 'Surviving without a GUI',
     Svg: require('../../static/img/undraw/primary/programmer.svg').default,
+    HoverSvg: require('../../static/img/undraw/secondary/programmer.svg').default,
     to: '/docs/01/01',
     description: (
       <>
@@ -16,7 +17,8 @@ const FeatureList = [
   },
   {
     title: 'Data handling using a shell',
-    Svg: require('../../static/img/undraw/secondary/hacker-mind.svg').default,
+    Svg: require('../../static/img/undraw/primary/hacker-mind.svg').default,
+    HoverSvg: require('../../static/img/undraw/secondary/hacker-mind.svg').default,
     to: '/docs/01/01',
     description: (
       <>
@@ -27,6 +29,7 @@ const FeatureList = [
   {
     title: 'Data handling with scripts',
     Svg: require('../../static/img/undraw/primary/data-processing.svg').default,
+    HoverSvg: require('../../static/img/undraw/secondary/data-processing.svg').default,
     to: '/docs/01/01',
     description: (
       <>
@@ -36,7 +39,8 @@ const FeatureList = [
   },
   {
     title: 'Visualization & Analysis',
-    Svg: require('../../static/img/undraw/secondary/data.svg').default,
+    Svg: require('../../static/img/undraw/primary/data.svg').default,
+    HoverSvg: require('../../static/img/undraw/secondary/data.svg').default,
     to: '/docs/01/01',
     description: (
       <>
@@ -47,6 +51,7 @@ const FeatureList = [
   {
     title: 'Tooling',
     Svg: require('../../static/img/undraw/primary/server-push.svg').default,
+    HoverSvg: require('../../static/img/undraw/secondary/server-push.svg').default,
     to: '/docs/01/01',
     description: (
       <>
@@ -56,7 +61,8 @@ const FeatureList = [
   },
   {
     title: 'Meta',
-    Svg: require('../../static/img/undraw/secondary/new-ideas.svg').default,
+    Svg: require('../../static/img/undraw/primary/new-ideas.svg').default,
+    HoverSvg: require('../../static/img/undraw/secondary/new-ideas.svg').default,
     to: '/docs/01/01',
     description: (
       <>
@@ -66,7 +72,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description,to}) {
+function Feature({Svg, HoverSvg, title, description,to}) {
   
   const [isHover, setHover] = useState(false)
 
@@ -76,12 +82,17 @@ function Feature({Svg, title, description,to}) {
 
   return (
     <div href="" className={clsx('col col--4 ')}>
-      {/* <Link to={to}> */}
+      <Link className={clsx(styles.Link)} to={to}>
       <div className={clsx(styles.cardWrapper, 'padding-bottom--lg')}>
         
-        <div className={clsx("card ", styles.card, isHover && 'shadow--md')} onMouseOver={toggleHover} onMouseOut={toggleHover}>
-          <div className="text--center">
-            <Svg className={styles.featureSvg} alt={title} />
+        <div className={clsx("card ", styles.FeatureCard, isHover && 'shadow--md')} onMouseEnter={toggleHover} onMouseLeave={toggleHover}>
+
+            <div className={clsx( "text--center")}>
+              {isHover
+                ? <HoverSvg className={styles.featureSvg} alt={title} />
+                : <Svg className={styles.featureSvg} alt={title} />
+              }
+            
           </div>
           <div className="text--center padding-horiz--md">
             <h3 >{title}</h3>
@@ -90,7 +101,7 @@ function Feature({Svg, title, description,to}) {
         </div>
         
       </div>
-      {/* </Link> */}
+      </Link>
     </div>
   );
 }

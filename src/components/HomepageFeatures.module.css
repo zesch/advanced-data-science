@@ -1,18 +1,18 @@
 /* stylelint-disable docusaurus/copyright-header */
 
 .features {
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-    width: 100%;
-  }
-  
-  .featureSvg {
-    height: 200px;
-    width: 200px;
-  }
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
 
-  /* make all cards the same height */
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+/* make all cards the same height */
 .cardWrapper{
   display: flex;
   height: 100%;
@@ -20,4 +20,14 @@
 
 h3{
   color: var(--ifm-color-primary);
+}
+
+.FeatureCard:hover h3{
+  color: var(--ifm-color-secondary);
+}
+
+.Link{
+  --ifm-link-hover-decoration: none;
+  --ifm-link-color: initial;
+  --ifm-link-hover-color: initial;
 }
