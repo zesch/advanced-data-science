@@ -14,7 +14,7 @@ module.exports = {
   favicon: 'img/signet_ude_primary.svg',
   
   url: 'https://zesch.github.io',
-  baseUrl: '/advanced-data-science/',
+  baseUrl: '/',
   organizationName: 'zesch', // Usually your GitHub org/user name.
   projectName: 'advanced-data-science', // Usually your repo name.
   customFields: {
