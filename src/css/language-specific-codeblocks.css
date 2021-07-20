@@ -8,6 +8,7 @@
     color: var(--language-color);
     position: absolute;
     background: linear-gradient(0deg, var(--ifm-code-background) 50%, rgba(0,0,0,0) 50%);
+    transform: translateY(-1px); /*move up by border width*/
     padding: 0 10px;
     top: -10px;
     left: 20px;
