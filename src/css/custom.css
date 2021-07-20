@@ -42,6 +42,8 @@
   --ifm-color-secondary-lighter: #ffd785;
   --ifm-color-secondary-lightest: #ffe7b7;
 
+
+
   --ifm-code-font-size: 95%;
   
   /* custom css variables */
@@ -50,6 +52,12 @@
   --ifm-footer-color: white;
   --ifm-footer-link-color: white;
 }
+
+.alert, .alert-secondary{
+  --ifm-alert-background-color: var(--ifm-color-secondary-lightest);
+  --ifm-alert-border-color: var(--ifm-color-secondary-lightest);
+}
+
 .hero--dark {
   --ifm-hero-background-color: var(--color-dark);
 }
