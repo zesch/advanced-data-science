@@ -88,10 +88,8 @@ function Feature({Svg, HoverSvg, title, description,to}) {
         <div className={clsx("card ", styles.FeatureCard, isHover && 'shadow--md')} onMouseEnter={toggleHover} onMouseLeave={toggleHover}>
 
             <div className={clsx( "text--center")}>
-              {isHover
-                ? <HoverSvg className={styles.featureSvg} alt={title} />
-                : <Svg className={styles.featureSvg} alt={title} />
-              }
+              <Svg className={styles.featureSvg} alt={title} />
+
             
           </div>
           <div className="text--center padding-horiz--md">
