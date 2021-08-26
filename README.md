@@ -1,5 +1,4 @@
 # 1. Missing Computer Science Semester
-
 <!-- TOC -->
 
 - [1. Missing Computer Science Semester](#1-missing-computer-science-semester)
