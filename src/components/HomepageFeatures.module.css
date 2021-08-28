@@ -19,15 +19,19 @@
 }
 
 h3{
-  color: var(--ifm-color-primary);
+  color: var(--ifm-link-color);
 }
 
 .FeatureCard:hover h3{
-  color: var(--ifm-color-secondary);
+  text-decoration: underline;
 }
 
 .Link{
   --ifm-link-hover-decoration: none;
-  --ifm-link-color: initial;
-  --ifm-link-hover-color: initial;
+  /* --ifm-link-color: initial;
+  --ifm-link-hover-color: initial; */
+}
+
+.FeatureCard p{
+  color: var(--ifm-font-color-base);
 }

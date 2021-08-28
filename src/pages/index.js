@@ -34,7 +34,7 @@ function HomepageHeader() {
                   Lectures
                 </Link>
                 <Link
-                  className="button button--secondary button--lg margin-bottom--md"
+                  className="button button--info button--lg margin-bottom--md"
                   to="/setup/">
                   Setup
                 </Link>
@@ -67,3 +67,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+//test develop branch commit
