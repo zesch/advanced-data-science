@@ -1,18 +1,19 @@
 # 1. Missing Computer Science Semester
 
-<!-- TOC depthfrom:undefined -->
+<!-- TOC -->
 
-- [1.1. for Contributors](#11-for-contributors)
-    - [1.1.1. Multiple Choice Quiz](#111-multiple-choice-quiz)
-    - [1.1.2. Admonitions](#112-admonitions)
-    - [1.1.3. Docs Metadata](#113-docs-metadata)
-- [1.2. for Developers](#12-for-developers)
-    - [1.2.1. Installation](#121-installation)
-    - [1.2.2. Local Development](#122-local-development)
-    - [1.2.3. Build](#123-build)
-    - [1.2.4. Deployment](#124-deployment)
-    - [1.2.5. Custom Components](#125-custom-components)
-    - [1.2.6. CustomFields](#126-customfields)
+- [1. Missing Computer Science Semester](#1-missing-computer-science-semester)
+    - [1.1. for Contributors](#11-for-contributors)
+        - [1.1.1. Multiple Choice Quiz](#111-multiple-choice-quiz)
+        - [1.1.2. Admonitions](#112-admonitions)
+        - [1.1.3. Docs Metadata](#113-docs-metadata)
+    - [1.2. for Developers](#12-for-developers)
+        - [1.2.1. Installation](#121-installation)
+        - [1.2.2. Local Development](#122-local-development)
+        - [1.2.3. Build](#123-build)
+        - [1.2.4. Deployment](#124-deployment)
+        - [1.2.5. Custom Components](#125-custom-components)
+        - [1.2.6. CustomFields](#126-customfields)
 
 <!-- /TOC -->
 
