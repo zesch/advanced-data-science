@@ -38,7 +38,7 @@ module.exports = {
     ]
   },
   
-
+  // themes: ['@docusaurus/theme-classic'],
   themeConfig: {
     colorMode: {
       switchConfig:{
@@ -65,38 +65,16 @@ module.exports = {
         src: 'img/ude/logo_claim_negativ.svg',
         href: 'https://www.uni-due.de',
       },
+      // github: {
+      //   alt: 'Universität Duisburg-Essen Logo',
+      //   src: 'img/ude/logo_claim_negativ.svg',
+      //   href: 'https://www.uni-due.de',
+      // },
       copyright: `
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
           <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-        </a>
-        <br />
-        This work is licensed under a 
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
-          Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
         </a>`,
-      links: [
-        {
-          title: 'Contact',
-        },
-        {
-          title: "Source Code",
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/zesch/advanced-data-science'
-            }
-          ]
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'About',
-              to: 'about/',
-            }
-          ]
-        }
-      ]
+      links: []
     },
     prism: {
       theme: lightCodeTheme,
