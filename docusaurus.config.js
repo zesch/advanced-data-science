@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
 
-  title: 'Advanced Data Science',
+  title: 'Practical Data Science',
   tagline: 'A gentle introduction to everything data',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -48,7 +48,7 @@ module.exports = {
       }
     },
     navbar: {
-      title: 'Advanced Data Science',
+      title: 'Practical Data Science',
       logo: {
         alt: 'UDE signet',
         src: 'img/ude/signet_ude_primary.svg',
