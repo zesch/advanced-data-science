@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zesch.github.io/blog</id>
-    <title>Advanced Data Science Blog</title>
+    <title>Practical Data Science Blog</title>
     <updated>2015-10-25T23:29:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zesch.github.io/blog"/>
-    <subtitle>Advanced Data Science Blog</subtitle>
+    <subtitle>Practical Data Science Blog</subtitle>
     <icon>https://zesch.github.io/img/signet_ude_primary.svg</icon>
 </feed>
