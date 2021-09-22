@@ -25,6 +25,9 @@ h3{
 .FeatureCard:hover h3{
   text-decoration: underline;
 }
+.FeatureCard:hover{
+  box-shadow:  var(--ifm-global-shadow-md), 0 0 0 2px var(--ifm-color-primary)  !important;
+}
 
 .Link{
   --ifm-link-hover-decoration: none;

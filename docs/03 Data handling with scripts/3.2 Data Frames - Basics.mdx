@@ -2,3 +2,154 @@
 title: 'Data Frames - basics'
 slug: /03/02
 ---
+import Link from '@docusaurus/Link';
+import DocusaurusImageUrl from '@site/static/img/GitHub-Mark-Light-120px-plus.png';
+import Footer from '@theme/Footer';
+import {DownloadLink} from '@theme/Download';
+
+
+## Getting Started
+
+### Prerequisites
+To follow along with this lecture you need
++ [python](https://www.python.org/downloads/)
++ [pandas](https://pypi.org/project/pandas/) 
++ the Dataset we are going to use: <DownloadLink path="/datasets/vgsales.csv"/> 
+
+:::info 
+Please download the Dataset and follow along as you read this lecture
+:::
+
+
+### How to read Dataframes
+Dataframes in pandas are basically just tables. The most common way to create a Dataframe is by reading a csv file
+
+```python
+df = pd.read_csv('data.csv')
+```
+
+### head
+To get a sense of what our Dataset looks like we can take a lot at the first rows with `df.head()`
+```python
+# returns the first 5 rows (5 is default)
+df.head()
+
+# You can also pass in the desired amount of rows
+
+# returns the first 10 rows
+df.head(10)
+```
+![df.head(10)](./assets/3.2_head_table.png)
+
+## Selecting Stuff
+### By Column
+If we are only interested in some of the columns we can select them as follows
+
+```python 
+# select a single column
+genres = vgs['Genre']
+publishers = vgs['Publisher']
+
+# select multiple columns
+genres_and_publishers = vgs[['Genre', 'Publisher']]
+years_and_sales = vgs[['Year', 'Global_Sales']]
+
+# select rows based on condition
+games_from_2008 = vgs[vgs.Year == 2008]
+racing_games = vgs[vgs.Genre == 'Racing']
+```
+
+:::info
+If you are unsure about the exact spelling of a column then you can always check the column names with `print(df.columns)` or `print(list(df))`
+:::
+
+
+### By Row
+We can select a subset of rows if we pass in a boolean. 
+If we want to chain multiple booleans together we have to use the [bitwise operators](https://www.geeksforgeeks.org/python-bitwise-operators/)
+`&, |, ~, ^` instead of `and, or, not`
+
+```python
+# Select all Wii games
+wii_games = vgs[vgs.Platform == 'Wii']
+# Select all Wii racing games
+wii_racing_games = vgs[(vgs.Platform == 'Wii') & (vgs.Genre == 'Racing')]
+```
+
+:::info
+You can also select Columns with the "dot Notation"
+E.g `vgs.Name` and `vgs["Name"]` are both equivalent.
+:::
+
+### By Both
+If we want to select a subset of both rows and columns we could just chain the row and column selectors together
+```python
+# Select Publishers of Puzzle Games
+puzzle_publishers = vgs[vgs.Genre == 'Puzzle']['Publisher']
+# Select Names of Playstation 2 Games
+ps2game_names = vgs[vgs.Platform == 'PS2']['Name']
+```
+:::danger
+Do not do this because it can lead to chained assignments. Use `DataFrame.loc` instead
+:::
+If we use `vgs.loc[<rowsSelector>, <columnsSelector>]` our code would look like this
+```python
+# Select Publishers of Puzzle Games
+puzzle_publishers = vgs.loc[vgs.Genre == 'Puzzle', 'Publisher']
+# Select Names of Playstation 2 Games
+ps2game_names = vgs.loc[vgs.Platform == 'PS2', 'Name']
+```
+
+## Usefull methods
+#### Series.unique
+```python
+# list all unique Publishers
+vgs['Publisher'].unique()
+# list all unique Genres
+vgs['Genre'].unique()
+```
+
+#### Series.value_counts 
+```python
+# Number of Games per Year
+vgs['Year'].value_counts()
+# Number of Games for each Genre
+vgs['Genre'].value_counts()
+```
+#### DataFrame.idxmax
+```python
+# Year with the most Games
+vgs['Year'].value_counts().idxmax()
+```
+#### DataFrame.nlargest
+```python
+# Select the 5 Publishers who have released the most games
+vgs['Publisher']value_counts().nlargest(5)
+# Select the 3 Years with most video games released
+vgs['Year']value_counts().nlargest(3)
+```
+## Groups
+For more complex relations we can group the DataFrame by one or more columns.
+```python
+
+```
+## Exercise
+0) Find out which game has the greatest number of Platforms it was released on
+```python
+name = vgs.groupby('Name')['Platform'].nunique().idxmax()
+print(name)
+vgs.loc[vgs.Name == name, 'Platform'].unique()
+```
+
+1.) Select the 5 most freqeuent Genres for the Publisher Nintendo
+```python 
+nintendo = vgs.loc[vgs.Publisher == 'Nintendo', 'Genre'].value_counts().nlargest(5)
+```
+2.) Select the 10 Publishers with the most unique games published
+```python
+vgs.groupby('Publisher')['Name'].nunique().nlargest(10)
+```
+3.) Rank all Publishers by their total Global_Sales
+```python
+ranked = vgs.groupby('Publisher')['Global_Sales'].sum().sort_values(ascending=False)
+```
