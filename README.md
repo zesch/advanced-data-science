@@ -7,6 +7,7 @@
         - [1.1.1. Multiple Choice Quiz](#111-multiple-choice-quiz)
         - [1.1.2. Admonitions](#112-admonitions)
         - [1.1.3. Docs Metadata](#113-docs-metadata)
+        - [1.1.4. Downloads](#114-downloads)
     - [1.2. for Developers](#12-for-developers)
         - [1.2.1. Installation](#121-installation)
         - [1.2.2. Local Development](#122-local-development)
@@ -67,6 +68,18 @@ title: Surviving without a GUI
 sidebar_position: 1
 ---
 ```
+### 1.1.4. Downloads
+You can include file downloads by importing the `DownloadLink` component from `@theme/Download`.
+The root of the path will be in `/static`.
+Optional Arguments are `text` (the text in the generated link) and `name` (the name of the file when it is downloaded). 
+Both default to the actual name of the file specified in path 
+```jsx
+import {DownloadLink} from '@theme/Download';
+<DownloadLink path="/datasets/dataset.csv"/>
+
+<DownloadLink path="/datasets/dataset.csv" name="my-dataset.csv" text="download my dataset"/>
+```
+
 
 ## 1.2. for Developers
 
