@@ -1,0 +1,46 @@
+#Download Link and Button
+
+import {DownloadButton, DownloadLink} from '@theme/Download';
+
+You can provide a downloadable resource by using `DownloadButton` or `DownloadLink`
+
+## DownloadButton 
+
+```jsx
+import {DownloadButton} from '@theme/Download';
+
+<DownloadButton path="/datasets/vgsales.csv" />
+```
+
+<DownloadButton path="/datasets/vgsales.csv" />
+
+## DownloadLink 
+
+```jsx
+import {DownloadLink} from '@theme/Download';
+
+The DownloadLink <DownloadLink path="/datasets/vgsales.csv" text="does not"/> break the text flow.
+```
+
+The DownloadLink <DownloadLink path="/datasets/vgsales.csv" text="does not"/> break the text flow.
+
+:::danger
+The path root is in `/static` and has to start with a backslash. `datasets/vgsales.csv` or `./datasets/vgslaes.csv` will not be accepted!
+:::
+
+## Optional Arguments
+
+Optional Arguments are 
++ text : the text inside the link or button 
++ name : the name of the downloaded file 
+
+```jsx
+import {DownloadButton} from '@theme/Download';
+
+<DownloadButton path="/datasets/vgsales.csv" text="example dataset" name="dataset.csv"/>
+```
+<DownloadButton path="/datasets/vgsales.csv" text="example dataset" name="dataset.csv"/>
+
+:::info
+if you provide a name you have to include the file extension
+:::
