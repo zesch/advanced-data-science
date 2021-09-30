@@ -1,4 +1,4 @@
-/* this is really fucking ugly */
+/* inject custom styles for dark mode toggle */
 .react-toggle-track-check>span::before {
     content: '\f186';
     font-family: "Font Awesome 5 Free";
