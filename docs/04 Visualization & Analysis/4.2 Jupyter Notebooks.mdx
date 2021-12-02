@@ -57,6 +57,10 @@ vgs.groupby('Publisher')['Name'].nunique().nlargest(10)
 
 Using this dataframe, we create a bar chart displaying the same information:
 ```jupyter
+import seaborn as sn
+import numpy as np
+import matplotlib.pyplot as plt
+
 sn.barplot(x= df.groupby('Publisher')['Name'].nunique().nlargest(10).index, # Put the indices of the 10 largest companies on the x-axis
            y=df.groupby('Publisher')['Name'].nunique().nlargest(10))        # Put the number of sold games of the 10 largest companies on the y-axis
  #These parameters are optional
