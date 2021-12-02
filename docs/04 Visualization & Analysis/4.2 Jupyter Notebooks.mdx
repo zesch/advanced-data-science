@@ -67,13 +67,28 @@ plt.ylabel("Number of games")                                               # Se
 plt.show()
 ```
 
-![blah](https://github.com/zesch/practical-data-science/blob/main/docs/04%20Visualization%20&%20Analysis/assets/top_publishers_nunique.jpg?raw=true)
+![top_publishers_nunique](https://github.com/zesch/practical-data-science/blob/main/docs/04%20Visualization%20&%20Analysis/assets/top_publishers_nunique.jpg?raw=true)
 
 3.) Rank all Publishers by their total Global_Sales
 ```python
 ranked = vgs.groupby('Publisher')['Global_Sales'].sum().sort_values(ascending=False)
 ```
 
+To visualize this would be messy, so let's select only the top 10 publishers according to global sales:
+```python
+ranked = vgs.groupby('Publisher')['Global_Sales'].sum().sort_values(ascending=False).head(10)
+```
+```jupyter
+sn.barplot(x= ranked.index, 
+           y= ranked)
+plt.rcParams["figure.figsize"] = (5,5)
+plt.xticks(rotation=90)
+plt.title('Number of top 10 most according to global sales', fontsize=15, fontweight='bold')
+plt.xlabel('Publishers')
+plt.ylabel("Number of global sales")
+plt.show()
+´´´
+![top_publishers_global_sales](https://github.com/zesch/practical-data-science/blob/main/docs/04%20Visualization%20%26%20Analysis/assets/top_publishers_global_sales.jpg)
 
 :::
 From here needs to be revised
