@@ -11,9 +11,6 @@ Streamlit is an open-source Python library that makes it easy to create and shar
 You may find many open-source apps written in streamlit such as e.g. the following NLP apps: [a demo of an spacy NLP pipeline](https://share.streamlit.io/ines/spacy-streamlit-demo/app.py) or [an analysis of the game of thrones characters](https://got-streamlit.herokuapp.com/).
 
 ### Prerequisites
-In this lecture, we will built an app that shows transliterations from latin to other scripts on a world map (showing the corresponding transliteration of the name at the place where the script is used).
-The choice of scripts is based on the availability of the transliteration.
-
 To follow along with this lecture you need
 + [streamlit](https://docs.streamlit.io/library/get-started/installation) 
 + [pandas](https://pandas.pydata.org/docs/getting_started/install.html)
@@ -29,7 +26,11 @@ pip install -r requirements.txt
 
 You can install some extra transliteration libraries if you want to implement some more scripts:
 + [aksharamukha](https://pypi.org/project/aksharamukha/)
-+ [transliterate] (https://pypi.org/project/transliterate/)
++ [transliterate](https://pypi.org/project/transliterate/)
+
+## Step-by-step guide to our transliteration app
+In this lecture, we will built an app that shows transliterations from latin to other scripts on a world map (showing the corresponding transliteration of the name at the place where the script is used).
+The choice of scripts is based on the availability of the transliteration.
 
 ### How to start streamlit
 Having installed streamlit, you need to write the corresponding python programme (which you can do in your favorite IDE or text editor).
@@ -45,6 +46,13 @@ Now we can invoke it with :
 ```cmd
 streamlit run translitName.py
 ```
+As your command line will tell you, you can now open your streamlit app in your browser at ``http://localhost:8502´´.
+
+### How to load text in streamlit
+Now we want to read in the user input:
+```python
+user_input = st.text_input("Put your name here in latin script")
+´´´
 
 ### How to read Dataframes in streamlit
 
