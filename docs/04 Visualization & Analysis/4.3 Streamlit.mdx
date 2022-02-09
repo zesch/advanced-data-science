@@ -16,19 +16,32 @@ The choice of scripts is based on the availability of the transliteration.
 
 To follow along with this lecture you need
 + [streamlit](https://docs.streamlit.io/library/get-started/installation) 
-+ [pandas] (https://pandas.pydata.org/docs/getting_started/install.html)
-+ [geopandas] (https://geopandas.org/en/stable/getting_started/install.html)
-+ [regex] (https://pypi.org/project/regex/)
-+ [folium] (https://pypi.org/project/folium/)
-+ [google-transliteration-api] (https://pypi.org/project/google-transliteration-api/)
++ [pandas](https://pandas.pydata.org/docs/getting_started/install.html)
++ [geopandas](https://geopandas.org/en/stable/getting_started/install.html)
++ [regex](https://pypi.org/project/regex/)
++ [folium](https://pypi.org/project/folium/)
++ [google-transliteration-api](https://pypi.org/project/google-transliteration-api/)
+
+Or just download the [requirements.txt](https://github.com/MeDarina/TransliterateYourName/blob/main/requirements.txt) from the corresponding project and execute
+```cmd
+pip install -r requirements.txt
+```
 
 You can install some extra transliteration libraries if you want to implement some more scripts:
 + [aksharamukha](https://pypi.org/project/aksharamukha/)
 + [transliterate] (https://pypi.org/project/transliterate/)
 
 ### How to start streamlit
+Having installed streamlit, you need to write the corresponding python programme (which you can do in your favorite IDE or text editor).
+We create the file "translitName.py" and start with importing streamlit and adding a title to the app:
 
-After having installed streamlit, you invoke it with 
+```python
+import streamlit as st
+
+st.title('Script your name')
+´´´
+Now we can invoke it with :
+
 ```cmd
 streamlit run translitName.py
 ```
