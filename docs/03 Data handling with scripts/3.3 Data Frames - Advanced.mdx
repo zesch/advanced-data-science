@@ -2,3 +2,37 @@
 title: 'Data Frames - Advanced'
 slug: /03/03
 ---
+
+## How to load information into data frames
+
+### How to load a world map
+In the following, we load a world map from geopandas to a dataframe:
+```python
+# Load the world.shp data 
+world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
+```
+### How to load add missing values to a data frame
+In the case of the map provided by ``naturalearth_lowres'', some language codes are missing. 
+These can be added in the following way:
+```python
+world.loc[world['name'] == 'France', 'iso_a3'] = 'FRA'
+world.loc[world['name'] == 'Norway', 'iso_a3'] = 'NOR' 
+world.loc[world['name'] == 'Greenland', 'iso_a3'] = 'GL'
+world.loc[world['name'] == 'Somaliland', 'iso_a3'] = 'SOM'
+world.loc[world['name'] == 'N. Cyprus','iso_a3'] = 'NCY'
+world.loc[world['name'] == 'Kosovo', 'iso_a3'] = 'RKS'
+```
+### How to load tables from the internet to a data frame?
+```python
+Alphabet_URL = 'https://www.key-shortcut.com/en/writing-systems/world-map-of-alphabets-scripts'
+alpha_df = pd.read_html(Alphabet_URL)[2] # set header with row #0
+alpha_df.drop(['Official language'], axis=1)
+```
+
+### How to display a map using folio
+
+### How to add transliterations 
+
+### 
+
+
