@@ -22,11 +22,13 @@ world.loc[world['name'] == 'Somaliland', 'iso_a3'] = 'SOM'
 world.loc[world['name'] == 'N. Cyprus','iso_a3'] = 'NCY'
 world.loc[world['name'] == 'Kosovo', 'iso_a3'] = 'RKS'
 ```
-### How to load tables from the internet to a data frame?
+### How to load tables from the internet to a data frame
+It's is possible to load tables from internet pages, e.g. from Wikipedia.
+In many cases, there are several tables on the page, some of them not directly visible to the user, so you might have to adjust which one you actually need.
+In the presented example, we load a table that holds countries and the official scripts used in it:
 ```python
 Alphabet_URL = 'https://www.key-shortcut.com/en/writing-systems/world-map-of-alphabets-scripts'
-alpha_df = pd.read_html(Alphabet_URL)[2] # set header with row #0
-alpha_df.drop(['Official language'], axis=1)
+alpha_df = pd.read_html(Alphabet_URL)[2] #on this page, this is the 2nd table
 ```
 
 ### How to display a map using folio
