@@ -53,7 +53,41 @@ Now we want to read in the user input:
 ```python
 user_input = st.text_input("Put your name here in latin script")
 ```
-### How to read Dataframes in streamlit
+
+## Non-streamlit specific steps to develop the app
+
+### How to transliterate using the [google-transliteration-api](https://pypi.org/project/google-transliteration-api/)
+```python
+#The google api version that we used couldn't handle the transliteration to japanese in many cases, but by helping with onsecutive consonants (which does not exist in the japanese script, we could circumvent this issue
+def japanese_rewrite(text):   
+    if text.endswith(('t','d')):
+        text = text + 'o' 
+    if text.endswith(('b','c','f','g','h','j','k','l','m','p','q','r','s','v','w','x','z')):
+        text = text + 'u'
+    japanese_rewrite0 = re.sub( r'[c][h]', r'k', text)
+    japanese_rewrite1 = re.sub( r"(([t|d])([bcdfghjklmnpqrstvwxz]))", r'\2o\3', japanese_rewrite0)
+    japanese_rewrite2 = re.sub( r"(([b|c|f|g|h|j|k|l|m|n|p|q|r|s|v|w|x|z])([b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z]))", r'\2u\3', japanese_rewrite1)
+    if japanese_rewrite2.__eq__(text):
+        return text
+    else:
+        return japanese_rewrite(japanese_rewrite2)
+
+arabic = transliterate_text(user_input, lang_code='ar')
+chinese = transliterate_text(user_input, lang_code='zh')
+hebrew = transliterate_text(user_input, lang_code='he')
+hindi = transliterate_text(user_input, lang_code='hi')
+japanese = transliterate_text(japanese_rewrite(user_input.lower()), lang_code='ja')
+russian =  transliterate_text(user_input, lang_code='ru')
+tamil =  transliterate_text(user_input, lang_code='ta')
+thai = transliterate_text(japanese_rewrite(user_input.lower()), lang_code='th')
+persian =  transliterate_text(user_input, lang_code='fa')
+greek = transliterate_text(user_input, lang_code='el')
+sinhala = transliterate_text(user_input, lang_code='si')
+amharic = transliterate_text(user_input, lang_code='am')
+tigrinya = transliterate_text(user_input, lang_code='ti')
+```
+
+
 
 ### How to display a map using folium
 folium is a python library that can be used with streamlit. It makes it easy to visualize data that’s been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for choropleth visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map. [folium source](https://python-visualization.github.io/folium/)
