@@ -128,6 +128,16 @@ vgs['Publisher']value_counts().nlargest(5)
 # Select the 3 Years with most video games released
 vgs['Year']value_counts().nlargest(3)
 ```
+#### DataFrame.merge
+```python
+world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
+name_in_scripts = pd.read_csv('script_table.csv')
+#for brevity, the other steps to further improve these two data frames to be used in the [transliteration app](https://zesch.github.io/practical-data-science/docs/04/03), are left out here, but should be added when re-implementing the app
+
+# merge of two data frames to one, based on the column "CODE" (country code) that they have in common
+merge=pd.merge(world,name_in_scripts,on='CODE')
+```
+
 ## Groups
 For more complex relations we can group the DataFrame by one or more columns.
 ```python
