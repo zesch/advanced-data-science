@@ -150,11 +150,27 @@ transliteration_scripts = {
 }
 ```
 
+### Load world map and add missing country codes (so that all countries on the list can be used
+```python
+world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
+world.loc[world['name'] == 'France', 'iso_a3'] = 'FRA'
+world.loc[world['name'] == 'Norway', 'iso_a3'] = 'NOR' #added Norway to countries_latitude_longitude.csv
+world.loc[world['name'] == 'Greenland', 'iso_a3'] = 'GL' #added Greenland to countries_latitude_longitude.csv
+world.loc[world['name'] == 'Somaliland', 'iso_a3'] = 'SOM'
+world.loc[world['name'] == 'N. Cyprus','iso_a3'] = 'NCY'
+world.loc[world['name'] == 'Kosovo', 'iso_a3'] = 'RKS'
+world.columns=['pop_est', 'continent', 'name', 'CODE', 'gdp_md_est', 'geometry']
+```
 ### Load table mapping country to script
 ```python
 name_in_scripts = pd.read_csv('script_table.csv')
 name_in_scripts = name_in_scripts.replace({'True': True, 'False': False})
 ```
+### Merge dataframes
+```python
+merge=pd.merge(world,name_in_scripts,on='CODE')
+```
+
 
 ### How to display a map using folium
 folium is a python library that can be used with streamlit. It makes it easy to visualize data that’s been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for choropleth visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map. [folium source](https://python-visualization.github.io/folium/)
