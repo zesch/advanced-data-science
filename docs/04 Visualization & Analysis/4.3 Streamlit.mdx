@@ -260,6 +260,102 @@ folium_static(m)
 ```
 
 
-### How to run the Streamlit app publically
+## How to run the Streamlit app publically
 If you want to deploy your app so that others can also use it, follow these [instructions](https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app)
 
+## Exercise
+
+
+import {MultipleChoice, Answer} from '../_components/Quiz.js';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+Hier ist ein bisschen text um zu sehen wie sich die margin der Quiz-Komponente aussieht
+
+<MultipleChoice
+question = 'How can you change the Link in the About section of the menu of the app?'
+>
+
+<Answer
+    correct
+    text="Put the following code at the beginning of your code"
+    codeLang= 'javascript'
+    code = {
+    'menu_items = {
+	'About': 'YourLink''
+    }
+st.set_page_config(menu_items=menu_items)}
+    explanation="This is correct."
+/>
+<Answer
+    text="Put the following code at the end of your code"
+    codeLang= 'javascript'
+    code = {
+    'menu_items = {
+	'About': 'YourLink''
+    }
+st.set_page_config(menu_items=menu_items)}
+    explanation="The page setting has to be determined right at the beginning."
+/>
+    <Answer
+    text="Put the following code in any part of your code"
+    codeLang= 'javascript'
+    code = {
+    'menu_items = {
+	'About': 'YourLink''
+    }
+st.set_page_config(menu_items=menu_items)}
+    explanation="The page setting has to be determined right at the beginning."
+/>
+</MultipleChoice>
+
+<MultipleChoice
+question = 'What's the output of the following code?'
+codeLang= 'python'
+code = {
+`lst.write('Transliteration: ', thai)
+`}>
+
+<Answer
+    text="The transliteration of the input name is output in the transliteration app"
+    explanation="Your answer is generally true, but too general."
+/>
+<Answer    
+    correct
+    text="The thai transliteration of the input name is output in the transliteration app"
+    explanation="This is correct."
+/>
+    <Answer    
+    text="The thai transliteration of the input name is output in the console."
+    explanation="This is incorrect, the output is performed in the app."
+/>
+</MultipleChoice>
+
+<MultipleChoice
+question = 'What do you need to do to make your streamlit app publically available?'
+>
+
+<Answer
+    text="Upload your code on Github"
+    explanation="Your answer is generally true, but there are also other correct answers."
+/>
+<Answer    
+    text="Create a requirements file"
+    explanation="Your answer is generally true, but there are also other correct answers."
+/>    
+<Answer    
+    text="Sign into share.streamlit.io"
+    explanation="Your answer is generally true, but there are also other correct answers."
+/>    
+<Answer    
+    text="Click 'Deploy an app' and then paste in your GitHub URL"
+    explanation="Your answer is generally true, but there are also other correct answers."
+/>                                                                                      
+<Answer   
+    correct                           
+    text="All of the above"
+    explanation="This is correct."
+/>
+</MultipleChoice>
